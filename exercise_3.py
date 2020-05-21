@@ -1,4 +1,4 @@
-#guessing number
+#guessing number game
 """
 9 guesses
 take user i/p number
