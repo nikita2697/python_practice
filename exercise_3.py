@@ -1,4 +1,4 @@
-#guessing number game
+#guessing number game for practice
 """
 9 guesses
 take user i/p number
