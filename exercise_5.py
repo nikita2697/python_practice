@@ -71,16 +71,23 @@ def read_file(a,b):
     if b==1:
         z1='y'
         while(z1!='n'):
-            with open(clients[a]+"_food.txt") as f:
-                content=f.readlines()
-                for i in content:
-                    print(i)
+            with open(clients[a]+"_food.txt","w+") as f:
+                content = f.readlines()
+                if f.tell() == 0:
+                    print("you have to write data first to read . There is nothing to read in file\n")
+                else:
+                    for i in content:
+                        print(i)
             z1=input("do you want to add more[y/n]?")
     else:
-        with open(clients[a]+"_exercise.txt") as f:
+        with open(clients[a]+"_exercise.txt","w+") as f:
             content=f.readlines()
-            for i in content:
-                print(i)
+            if f.tell()==0:
+                print("you have to write data first to read . There is nothing to read in file\n")
+            else:
+                for i in content:
+                    print(i)
+
 
 
 try:

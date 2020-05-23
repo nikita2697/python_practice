@@ -47,8 +47,12 @@ b- binary mode
 
 # readlines:store line wise in list
 
-f = open("nikita.txt")
-print(f.readlines())
+f = open("nikita1.txt","w+")
+content=f.readlines();
+if f.tell()==0:
+    print("nothing to read in file")
+else:
+    print(f.readlines())
 #print(f.readline())
 f.close()
 
